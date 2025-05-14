@@ -7,9 +7,9 @@ class TicTacToe:
         self.current_player = 'X'
         self.game_state = 'running'
         self.win_combinations = (
-            (0, 1, 2), (3, 4, 5), (6, 7, 8),  # Rows
-            (0, 3, 6), (1, 4, 7), (2, 5, 8),  # Columns
-            (0, 4, 8), (2, 4, 6)              # Diagonals
+            (0, 1, 2), (3, 4, 5), (6, 7, 8),  # For Rows
+            (0, 3, 6), (1, 4, 7), (2, 5, 8),  # for Columns
+            (0, 4, 8), (2, 4, 6)              # For Diagonals
         )
 
     def make_move(self, position):
@@ -53,7 +53,7 @@ class GameGUI:
                 (0, i * self.cell_size), 
                 (self.size, i * self.cell_size), 3)
         
-        # Draw X's and O's
+        # For drawing X's and O's to TIC TAC
         for i in range(9):
             x = (i % 3) * self.cell_size + self.cell_size//2
             y = (i // 3) * self.cell_size + self.cell_size//2
